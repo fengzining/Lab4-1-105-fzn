@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>定位知识点视图</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Microsoft YaHei", sans-serif;
+        }
+        .container {
+            position: relative;
+            width: 850px;
+            height: 605px;
+            margin: 30px auto;
+            border: 1px solid #ccc;
+            background-color: #f8f9fa;
+        }
+
+        .center-oval {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 370px;
+            height: 201px;
+        
+            background: url("photo.jpg") no-repeat center;
+            background-size: cover;
+            border-radius: 50%; 
+            z-index: 10;
+            box-shadow: 0 0 10px rgba(0,0,0,0.2);
+        }
+
+        .box-html {
+            position: absolute;
+            top: 30px;
+            left: 170px;
+            width: 288px;
+            height: 210px;
+            background: #e8e8e8; 
+            border: 1px solid #999;
+            padding: 15px;
+            z-index: 5; 
+        }
+
+        /* 左下正方形知识点框 */
+        .box-css {
+            position: absolute;
+            bottom: 60px;
+            top: 327px;
+            left: 80px;
+            width: 240px;
+            height: 235px;
+            background: #e8e8e8;
+            border: 1px solid #999;
+            padding: 15px;
+            z-index: 5;
+        }
+
+        /* 右下正方形知识点框*/
+        .box-js {
+            position: absolute;
+            bottom: 60px;
+            top: 327px;
+            right: 63px;
+            width: 240px;
+            height: 235px;
+            background: #e8e8e8;
+            border: 1px solid #999;
+            padding: 15px;
+            z-index: 5;
+        }
+
+        /* 标题样式 */
+        .box-title {
+            font-size: 16px;
+            font-weight: bold;
+            margin-bottom: 1px;
+            color: #000;
+        }
+
+        /* 列表样式 */
+        .knowledge-list {
+            list-style-type: disc;
+            padding-left: 20px;
+            font-size: 13px;
+            line-height: 1.6;
+            color: #000;
+        }
+        /* CSS列表用空心圆点 */
+        .box-css .knowledge-list {
+            list-style-type: circle;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="center-oval"></div>
+
+        <div class="box-html">
+           <br> <h3 class="box-title">HTML基础和HTML5</h3></br>
+            <ul class="knowledge-list">
+                <li>HTML标签与属性</li>
+                <li>HTML5多媒体（视频和音频）</li>
+                <li>HTML5图像标签（画布和SVG）</li>
+                <li>HTML5地理定位</li>
+                <li>HTML5表单</li>
+            </ul>
+        </div>
+
+       
+        <div class="box-css">
+           <br> <h3 class="box-title">CSS基础和CSS3</h3></br>
+            <ul class="knowledge-list">
+                <li>CSS选择器</li>
+                <li>CSS样式</li>
+                <li>CSS盒模型与定位</li>
+                <li>CSS3的2D与3D转换</li>
+                <li>CSS3的过渡与动画</li>
+                <li>CSS3新的边框效果</li>
+            </ul>
+        </div>
+
+        
+        <div class="box-js">
+           <br> <h3 class="box-title">JavaScript</h3></br>
+            <ul class="knowledge-list">
+                <li>数据类型</li>
+                <li>运算符</li>
+                <li>基础语法</li>
+                <li>BOM对象</li>
+                <li>DOM对象</li>
+                <li>JS特效</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
